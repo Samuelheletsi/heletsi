@@ -543,15 +543,19 @@
     <script type="text/javascript">
         document.getElementById('contact-form').addEventListener('submit', function(event) {
             event.preventDefault(); // Prevent the default form submission
-
-            // Replace 'YOUR_SERVICE_ID' and 'YOUR_TEMPLATE_ID' with your EmailJS service ID and template ID
-            emailjs.sendForm(service_1m5dot9, template_lks6pak, this)
-                .then(function() {
+            
+            console.log('Form submitted'); // Log to verify the form submission
+        
+            emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+                .then(function(response) {
+                    console.log('Message Sent Successfully:', response);
                     alert('Message Sent Successfully!');
                 }, function(error) {
+                    console.error('Failed to send message:', error);
                     alert('Failed to send message. Error: ' + JSON.stringify(error));
                 });
         });
+        
     </script>
      
 </body>
