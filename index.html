@@ -551,6 +551,7 @@
                 .then(function(response) {
                     console.log('Message Sent Successfully:', response);
                     alert('Message Sent Successfully!');
+                    window.location.reload();
                 }, function(error) {
                     console.error('Failed to send message:', error);
                     alert('Failed to send message. Error: ' + JSON.stringify(error));
