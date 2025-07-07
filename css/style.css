@@ -280,8 +280,8 @@ margin-right: 15px;
     
 
 }
-H1{
-  color: var(--text-black-900);
+H2{
+  color:var(--text-black-900);
   font-size: 25px;
 }
 h3.hello{
